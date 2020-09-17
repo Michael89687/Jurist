@@ -49,7 +49,6 @@ h1, h2, h3, h4, h5, h6 {
 <link rel="stylesheet" href="{{ url_for('static', filename='css/timeline2.css') }}">
 {% for years, date_range, timeline_info in articles %}
 <h2>{{years}}</h2>
-<h3>{{date_range}}</h3>
 <section class="time-line-box">
 <div class="swiper-container text-center"> 
 <div class="swiper-wrapper">
@@ -81,7 +80,6 @@ h1, h2, h3, h4, h5, h6 {
 
 <link rel="stylesheet" href="{{ url_for('static', filename='css/timeline.css') }}">
 {% for number, topics, date_range, timeline_info in items %}
-<h2>{{number}}</h2>
 <h3>{{topics}}</h3>
 <h3>{{date_range}}</h3>
 <section class="time-line-box">
