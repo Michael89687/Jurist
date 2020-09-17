@@ -63,7 +63,7 @@
    background:#a8a8a8b6;
 }
 .swiper-container::-webkit-scrollbar{
-  height: 12px;
+  height: 16px;
 }
 .swiper-container::-webkit-scrollbar-thumb{
    background: #4F4F4F !important;
