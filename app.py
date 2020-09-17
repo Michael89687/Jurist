@@ -26,7 +26,7 @@ def all_articles(text):
     years = []
 
     for i in sorted(set(pd.DatetimeIndex(temps['0']).year)):
-        years.append("• " + str(i)) #Displays each year on website
+        years.append("  " + str(i)) #Displays each year on website
         temps['0'] = pd.to_datetime(temps['0'])
         year_data = temps[temps['0'].dt.year == i]
         
@@ -157,7 +157,7 @@ def model(text):
         first_date = dates[0]
         last_date = dates[-1]
         #Displays date range text on HTML
-        date_range_text.append("• From " + str(first_date['date']) + " to " + str(last_date['date']))
+        date_range_text.append("  " + "From " + str(first_date['date']) + " to " + str(last_date['date']))
         
         titles = []
         for i in clustered['1']:
@@ -186,7 +186,7 @@ def model(text):
         
         wordcount = word_count(topic_list)
         sort = sorted(wordcount, key=wordcount.get, reverse=True)[0:5] #Get the top 5 words by count of each cluster
-        topics_text.append("• Topics: " + str(sort))
+        topics_text.append("  " + "Topics: " + str(sort))
      
         combined.append([{**d, **n, **l} for (d, n, l) in zip(dates, titles, links)]) #Information displayed on timeline
     massive_list = zip(number_text, topics_text, date_range_text, combined) #Combines timeline information along with cluster information
